@@ -63,4 +63,7 @@ All the functions are tested and the contract has 100% coverage.
 
 ## Security Considerations
 
-All the contracts are written in latest version of Solidity 0.8.0. So the mathematical overflow checks are already available by default with this version.
+All the contracts are written in latest version of Solidity 0.8.0. So the <b>mathematical overflow checks</b> are already available by default with this version. In addition to this, the following security features are integrated into the smart contract architecture.
+
+- <b>Check Effect Interactions:</b> All the interactions in the functions follow CEI pattern to avoid re-entrancy.
+- <b>Guard Check: </b> The two main functions: Buy/Sell and Lend/Borrow is managed by their individual status controlled by the state variable of the contract. Every interaction starts with checking the status of the contract. This will restrict the unwanted behaviour of the contract. \*<b>Safe Transfer:</b> Transfer function has been used for transferring the amounts and balances. For liquidating the contract, <b>PushoverPull</b> method has been used which increases security.

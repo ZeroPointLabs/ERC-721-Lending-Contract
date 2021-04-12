@@ -181,8 +181,8 @@ contract DBNFT is ERC721 {
         );
         //Owner will get the borrower's deposit on liquidating
         uint256 liquidateAmount = 2 * _db.value;
-        _receiveAddress.transfer(liquidateAmount);
         getNFTInfobyID[_index].loanStatus = LoanStatus.LIQUIDATED;
+        _receiveAddress.transfer(liquidateAmount);
     }
 
     //Function for Borrower to return the NFT before the Loan Period
