@@ -1,6 +1,6 @@
 # DBNFT - An ERC-721 Lending Contract
 
-DBNFT is an ERC-721 Contract for digital collectibles. The contract is designed to be integrated with either a web application or a mobile App. It allows the user to create and interact with ERC-721 tokens. This contract is aimed for artists who wish to convert their digital art into NFTs and monetize them by either selling or lending the NFT. The NFT stores the ownership and lending data within the token itself.
+DBNFT is an ERC-721 Contract for digital collectibles. The contract is designed to be integrated with either a web application or a mobile App. It allows the user to create and interact with ERC-721 tokens. This contract is aimed for artists who wish to convert their digital creations into NFTs and monetize them by either selling or lending the NFT. The NFT stores the ownership and lending data within the token itself.
 
 ## DeFi Components
 
@@ -8,13 +8,15 @@ The token is designed with following characteristics to benefit from the DeFi in
 
 ## Loan options
 
-- When the token is loaned, the token is transferred to the borrower with full access to transfer the token to any other DeFi protocol. But the data stored in the token cannot be modified. The token also holds the borrower address, time of borrowing and the duration.
+- Only the owner of the token can list the token for loan.
 
-* The loan amount is calculated based on the compund interest formula calculated every second. The borrower has to pay this loan amount in addition to the refundable deposit of 2 x token value, upfront before having access to the token. When the borrower returns the token, the deposit is returned back to them.
+* When the token is loaned, the token is transferred to the borrower with complete access to transfer the token to any other DeFi protocol. But the data stored in the token cannot be modified. The token also holds the borrower address, time of borrowing and the duration.
 
-* The owner of the token cannot claim access to the token during the loan period.
+- The loan amount is calculated based on the compound interest formula calculated every second. The borrower has to pay this loan amount in addition to the refundable deposit of twice the value of token upfront, before having access to the token. When the borrower returns the token, the deposit is returned back to them.
 
-* If the borrower fails to return the token
+- The owner of the token cannot claim access to the token during the loan period. They can however liquidate the token and get the security deposit from the borrower, if the borrower fails to return the token before the committed time.
+
+- If the borrower fails to return the token by the committed time, they will forfeit their security deposit.
 
 ## Sell options
 
