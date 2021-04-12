@@ -6,15 +6,15 @@ ERC-721 Contract with the following options<br/>
 
 Creates a new NFT with:
 
-### Description
+- Description
 
-### Address of Owner
+- Address of Owner
 
-### Adress of Borrower
+- Adress of Borrower
 
-### Status for Buy/Sell - FOR_SALE and NOT_FOR_SALE
+- Status for Buy/Sell - FOR_SALE and NOT_FOR_SALE
 
-### Status for Loan - FOR_LOAN, ON_LOAN, LIQUIDATE
+- Status for Loan - FOR_LOAN, ON_LOAN, LIQUIDATED
 
 ## List NFT for Sale
 
