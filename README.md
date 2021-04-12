@@ -60,3 +60,7 @@ Anyone can borrow the NFT listed for loan by calling this function and transferr
 
 All the functions are tested and the contract has 100% coverage.
 ![image](https://user-images.githubusercontent.com/45354395/114468132-003a2e00-9bb9-11eb-9663-9fa45b879ee2.png)
+
+## Security Considerations
+
+All the contracts are written in latest version of Solidity 0.8.0. So the mathematical overflow checks are already available by default with this version.
