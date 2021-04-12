@@ -6,7 +6,7 @@ DBNFT is an ERC-721 Contract for digital collectibles. The contract is designed 
 
 The token is designed with following characteristics to benefit from the DeFi industry (staking or yield farming) and also to avoid misuse of the tokens when interacting with the contract.
 
-### Loan options
+### Lend/Borrow option:
 
 - Only the owner of the token can list the token for loan.
 
@@ -18,7 +18,7 @@ The token is designed with following characteristics to benefit from the DeFi in
 
 - If the borrower fails to return the token by the committed time, they will forfeit their security deposit.
 
-### Sell options
+### Buy/Sell option:
 
 - When the token is sold, the ownership is completely transferred by modifying the ownership details in the token. The buyer is free to use the token as they wish.
 
@@ -60,4 +60,3 @@ Anyone can borrow the NFT listed for loan by calling this function and transferr
 
 All the functions are tested and the contract has 100% coverage.
 ![image](https://user-images.githubusercontent.com/45354395/114468132-003a2e00-9bb9-11eb-9663-9fa45b879ee2.png)
-
