@@ -59,3 +59,5 @@ Anyone can borrow the NFT listed for loan by calling this function and transferr
 ## Testing
 
 All the functions are tested and the contract has 100% coverage.
+![image](https://user-images.githubusercontent.com/45354395/114468132-003a2e00-9bb9-11eb-9663-9fa45b879ee2.png)
+
