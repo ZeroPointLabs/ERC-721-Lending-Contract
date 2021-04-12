@@ -1,3 +1,5 @@
+//SPDX-Licence-Identifier: MIT
+
 pragma solidity ^0.8.0;
 
 import "./Context.sol";
@@ -94,7 +96,7 @@ contract ERC721 is
         _symbol = symbol_;
 
         // register the supported interfaces to conform to ERC721 via ERC165
-        // _registerInterface(_INTERFACE_ID_ERC721);
+        _registerInterface(_INTERFACE_ID_ERC721);
         // _registerInterface(_INTERFACE_ID_ERC721_METADATA);
         // _registerInterface(_INTERFACE_ID_ERC721_ENUMERABLE);
     }

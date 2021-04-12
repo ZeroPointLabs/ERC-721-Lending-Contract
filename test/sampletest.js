@@ -6,106 +6,139 @@ const truffleAssert = require('truffle-assertions');
 contract("DBNFT", (accounts) => {
     const tokenNameExpected = "DBNFT";
     const tokenSymbolExpected = "DB";
-    const owner = accounts[0];
-    const recepient = accounts[1];
-    const date1 = '30.01.2021';
-    const ownerName1 = 'owner1';
+    const owner1 = accounts[0];
+    const owner2 = accounts[1];
+    const description1 = 'Description 1';
     const value1 = new BN('100');
-    const date2 = '30.01.2021';
-    const ownerName2 = 'owner2';
-    const value2 = new BN('200');
+    const description2 = 'description2';
+    const value2 = new BN('100');
     let logs = null;
-    let CCNFTInstance
+    let DBNFTInstance
 
     before(async ()=>{
-        CCNFTInstance = await CCNFT.deployed();
-        const name = await CCNFTInstance.name();
-        const symbol = await CCNFTInstance.symbol();
+        DBNFTInstance = await DBNFT.deployed();
+        const name = await DBNFTInstance.name();
+        const symbol = await DBNFTInstance.symbol();
         assert.equal(name, tokenNameExpected, "Token Name not as Expected");
         assert.equal(symbol, tokenSymbolExpected, "Symbol not as Expected");
-        await CCNFTInstance.CreateCoins(date1,ownerName1,value1);
-        await CCNFTInstance.CreateCoins(date2,ownerName2,value2);
+        await DBNFTInstance.mintNFT(value1,description1,owner1);
+        await DBNFTInstance.mintNFT(value2,description2,owner1);
     });
 
     it("test balanceOf()", async () => {
-        const bal = await CCNFTInstance.balanceOf(owner);
+        const bal = await DBNFTInstance.balanceOf(owner1);
         assert.equal(bal.toNumber(),2, "The initial balance of token is not as expected");
     });
 
     it("test ownerOf()", async () => {
         const tokenId = new BN('0');
-        assert(await CCNFTInstance.ownerOf(tokenId),owner,"OwnerOf not working");
+        assert(await DBNFTInstance.ownerOf(tokenId),owner1,"OwnerOf not working");
     });
 
     it("test safeTransferFrom()", async()=>{
-        await CCNFTInstance.safeTransferFrom(owner,recepient, 0);
-        balOwner = await CCNFTInstance.balanceOf(owner);
-        balRecepient = await CCNFTInstance.balanceOf(recepient);
+        await DBNFTInstance.safeTransferFrom(owner1,owner2, 0);
+        balOwner = await DBNFTInstance.balanceOf(owner1);
+        balRecepient = await DBNFTInstance.balanceOf(owner2);
         assert.equal(balOwner.toNumber(),1, "The balance of token from owner is not reduced");
         assert.equal(balRecepient.toNumber(),1, "The balance of token in recepient is not increased");
     })
 
     it("test safeTransferFrom(data)", async()=>{
         const data = '0x42';
-        await CCNFTInstance.safeTransferFrom(owner,recepient, 1, data);
-        balOwner = await CCNFTInstance.balanceOf(owner);
-        balRecepient = await CCNFTInstance.balanceOf(recepient);
+        await DBNFTInstance.safeTransferFrom(owner1,owner2, 1, data);
+        balOwner = await DBNFTInstance.balanceOf(owner1);
+        balRecepient = await DBNFTInstance.balanceOf(owner2);
         assert.equal(balOwner.toNumber(),0, "The balance of token from owner is not reduced");
         assert.equal(balRecepient.toNumber(),2, "The balance of token in recepient is not increased");
         
     })
     
     it("test transferFrom()", async()=>{
-        await CCNFTInstance.transferFrom(recepient, owner, 0, {from: accounts[1]});
-        balOwner = await CCNFTInstance.balanceOf(owner);
-        balRecepient = await CCNFTInstance.balanceOf(recepient);
+        await DBNFTInstance.transferFrom(owner2, owner1, 0, {from: accounts[1]});
+        balOwner = await DBNFTInstance.balanceOf(owner1);
+        balRecepient = await DBNFTInstance.balanceOf(owner2);
         assert.equal(balOwner.toNumber(),1, "The balance of token from owner is not reduced");
         assert.equal(balRecepient.toNumber(),1, "The balance of token in recepient is not increased");
     })
 
     it("test approve()", async()=>{
-        await CCNFTInstance.approve(recepient, 0);
-        let approved = await CCNFTInstance.getApproved(0);
-        assert.equal(approved,recepient, "Approve not working");
+        await DBNFTInstance.approve(owner2, 0);
+        let approved = await DBNFTInstance.getApproved(0);
+        assert.equal(approved,owner2, "Approve not working");
     })
 
     it("test setApprovalForAll()", async()=>{
-        await CCNFTInstance.setApprovalForAll(recepient,true);
-        let isApproved = await CCNFTInstance.isApprovedForAll(owner,recepient);
+        await DBNFTInstance.setApprovalForAll(owner2,true);
+        let isApproved = await DBNFTInstance.isApprovedForAll(owner1,owner2);
         assert.equal(isApproved,true, "setApprovalForAll not working");
     })
 
     it("test getApproved()", async()=>{
-        await CCNFTInstance.approve(recepient, 0);
-        let approved = await CCNFTInstance.getApproved(0);
-        assert.equal(approved,recepient, "Approve not working");
+        await DBNFTInstance.approve(owner2, 0);
+        let approved = await DBNFTInstance.getApproved(0);
+        assert.equal(approved,owner2, "Approve not working");
     })
 
     it("test isApprovedForAll()", async()=>{
-        await CCNFTInstance.setApprovalForAll(recepient,true);
-        let isApproved = await CCNFTInstance.isApprovedForAll(owner,recepient);
+        await DBNFTInstance.setApprovalForAll(owner2,true);
+        let isApproved = await DBNFTInstance.isApprovedForAll(owner1,owner2);
         assert.equal(isApproved,true, "setApprovalForAll not working");
     })
 
     it("test ERC165supportsInterface()", async()=>{
-         let supportERC721 = await CCNFTInstance.supportsInterface('0x80ac58cd');
+         let supportERC721 = await DBNFTInstance.supportsInterface('0x80ac58cd');
          assert.equal(supportERC721,true,"Support Interface not working");
     })
 
     it("test Transfer event", async()=>{
-        let result = await CCNFTInstance.transferFrom(recepient, owner, 1, {from: accounts[1]});
+        let result = await DBNFTInstance.transferFrom(owner2, owner1, 1, {from: accounts[1]});
         truffleAssert.eventEmitted(result, 'Transfer');
     })
 
     it("test Approval event", async()=>{
-        let result = await CCNFTInstance.approve(recepient, 0);
+        let result = await DBNFTInstance.approve(owner2, 0);
         truffleAssert.eventEmitted(result, 'Approval');
     })
 
     it("test ApprovalForAll event", async()=>{
-        let result = await CCNFTInstance.setApprovalForAll(recepient,true);
+        let result = await DBNFTInstance.setApprovalForAll(owner2,true);
         truffleAssert.eventEmitted(result, 'ApprovalForAll');
+    })
 
+    it("test listNFTforSale",async()=>{
+        balOwner = await DBNFTInstance.balanceOf(owner1);
+        assert.equal(balOwner.toNumber(),2, "The balance of owner1 is not correct");
+        let result = await DBNFTInstance.listNFTForSale(0,100);
+        balOwnerNew = await DBNFTInstance.balanceOf(owner1);
+        assert.equal(balOwnerNew.toNumber(),1, "List NFTForSale not working");
+    })
+
+    it("test buyNFT",async()=>{
+        let result = await DBNFTInstance.buyNFT(0, owner2, {from: accounts[1], value: 305});
+        balOwnerNew = await DBNFTInstance.balanceOf(owner2);
+        assert.equal(balOwnerNew.toNumber(),1, "List NFTForSale not working");
+        truffleAssert.eventEmitted(result, 'Transfer');
+    })
+
+    it("test listNFTforLoan",async()=>{
+        let result = await DBNFTInstance.listNFTForLoan(0,{from: accounts[1]});
+        balOwnerNew = await DBNFTInstance.balanceOf(owner2);
+        assert.equal(balOwnerNew.toNumber(),0, "List NFTForSale not working");
+        truffleAssert.eventEmitted(result, 'Transfer');
+    })
+
+    it("test borrowNFT",async()=>{
+        let result = await DBNFTInstance.borrowNFT(0,1000,{value: 305})
+        balOwnerNew = await DBNFTInstance.balanceOf(owner1);
+        assert.equal(balOwnerNew.toNumber(),2, "Borrow NFT not working");
+        truffleAssert.eventEmitted(result, 'Transfer');
+    })
+
+    it("test returnNFT", async()=>{
+        let result = await DBNFTInstance.returnNFT(0, owner1);
+        balOwnerNew = await DBNFTInstance.balanceOf(owner1);
+        assert.equal(balOwnerNew.toNumber(),1, "Return NFT not working");
+        truffleAssert.eventEmitted(result, 'Transfer');
     })
 
     

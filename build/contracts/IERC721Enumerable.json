@@ -343,7 +343,7 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.8.0+commit.c7dfd78e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"approved\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"Approval\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"approved\",\"type\":\"bool\"}],\"name\":\"ApprovalForAll\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"Transfer\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"approve\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"}],\"name\":\"balanceOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"balance\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"getApproved\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"}],\"name\":\"isApprovedForAll\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"ownerOf\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"safeTransferFrom\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"safeTransferFrom\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"internalType\":\"bool\",\"name\":\"_approved\",\"type\":\"bool\"}],\"name\":\"setApprovalForAll\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"interfaceId\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"index\",\"type\":\"uint256\"}],\"name\":\"tokenByIndex\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"index\",\"type\":\"uint256\"}],\"name\":\"tokenOfOwnerByIndex\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"totalSupply\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"transferFrom\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"approve(address,uint256)\":{\"details\":\"Gives permission to `to` to transfer `tokenId` token to another account. The approval is cleared when the token is transferred. Only a single account can be approved at a time, so approving the zero address clears previous approvals. Requirements: - The caller must own the token or be an approved operator. - `tokenId` must exist. Emits an {Approval} event.\"},\"balanceOf(address)\":{\"details\":\"Returns the number of tokens in ``owner``'s account.\"},\"getApproved(uint256)\":{\"details\":\"Returns the account approved for `tokenId` token. Requirements: - `tokenId` must exist.\"},\"isApprovedForAll(address,address)\":{\"details\":\"Returns if the `operator` is allowed to manage all of the assets of `owner`. See {setApprovalForAll}\"},\"ownerOf(uint256)\":{\"details\":\"Returns the owner of the `tokenId` token. Requirements: - `tokenId` must exist.\"},\"safeTransferFrom(address,address,uint256)\":{\"details\":\"Safely transfers `tokenId` token from `from` to `to`, checking first that contract recipients are aware of the ERC721 protocol to prevent tokens from being forever locked. Requirements: - `from` cannot be the zero address. - `to` cannot be the zero address. - `tokenId` token must exist and be owned by `from`. - If the caller is not `from`, it must be have been allowed to move this token by either {approve} or {setApprovalForAll}. - If `to` refers to a smart contract, it must implement {IERC721Receiver-onERC721Received}, which is called upon a safe transfer. Emits a {Transfer} event.\"},\"safeTransferFrom(address,address,uint256,bytes)\":{\"details\":\"Safely transfers `tokenId` token from `from` to `to`. Requirements: - `from` cannot be the zero address. - `to` cannot be the zero address. - `tokenId` token must exist and be owned by `from`. - If the caller is not `from`, it must be approved to move this token by either {approve} or {setApprovalForAll}. - If `to` refers to a smart contract, it must implement {IERC721Receiver-onERC721Received}, which is called upon a safe transfer. Emits a {Transfer} event.\"},\"setApprovalForAll(address,bool)\":{\"details\":\"Approve or remove `operator` as an operator for the caller. Operators can call {transferFrom} or {safeTransferFrom} for any token owned by the caller. Requirements: - The `operator` cannot be the caller. Emits an {ApprovalForAll} event.\"},\"supportsInterface(bytes4)\":{\"details\":\"Returns true if this contract implements the interface defined by `interfaceId`. See the corresponding https://eips.ethereum.org/EIPS/eip-165#how-interfaces-are-identified[EIP section] to learn more about how these ids are created. This function call must use less than 30 000 gas.\"},\"tokenByIndex(uint256)\":{\"details\":\"Returns a token ID at a given `index` of all the tokens stored by the contract. Use along with {totalSupply} to enumerate all tokens.\"},\"tokenOfOwnerByIndex(address,uint256)\":{\"details\":\"Returns a token ID owned by `owner` at a given `index` of its token list. Use along with {balanceOf} to enumerate all of ``owner``'s tokens.\"},\"totalSupply()\":{\"details\":\"Returns the total amount of tokens stored by the contract.\"},\"transferFrom(address,address,uint256)\":{\"details\":\"Transfers `tokenId` token from `from` to `to`. WARNING: Usage of this method is discouraged, use {safeTransferFrom} whenever possible. Requirements: - `from` cannot be the zero address. - `to` cannot be the zero address. - `tokenId` token must be owned by `from`. - If the caller is not `from`, it must be approved to move this token by either {approve} or {setApprovalForAll}. Emits a {Transfer} event.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/C/Users/Pradeep/Documents/GitHub/ERC-721 Lending Contract/ERC-721-Lending-Contract/contracts/standards/IERC721Enumerable.sol\":\"IERC721Enumerable\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/Pradeep/Documents/GitHub/ERC-721 Lending Contract/ERC-721-Lending-Contract/contracts/standards/IERC165.sol\":{\"keccak256\":\"0xc607d6a16f58e4d3b99509d3eae6f74851f66aa7ee763c55cbda873c3b8bca52\",\"urls\":[\"bzz-raw://a23a047c51d1ecd9528208fa151c0e33aea74d92289cf5dffb94fc19e37b7bf7\",\"dweb:/ipfs/QmSes7NmA9HHY8RrVna3pdZy28z335mUNraaFr8FMCMrwG\"]},\"/C/Users/Pradeep/Documents/GitHub/ERC-721 Lending Contract/ERC-721-Lending-Contract/contracts/standards/IERC721.sol\":{\"keccak256\":\"0x9c250dd362a46bcbeceebe4466b9541f9c6606c80f4f356131a09b787ef77e02\",\"urls\":[\"bzz-raw://951116a27f59b33cbf76f314580eeeea8c25655ca613a42b8936a3c75e47d67f\",\"dweb:/ipfs/QmPwHurNS2dgYb9np6tB3HvpSyojnRJiBPVK83f4gxDh35\"]},\"/C/Users/Pradeep/Documents/GitHub/ERC-721 Lending Contract/ERC-721-Lending-Contract/contracts/standards/IERC721Enumerable.sol\":{\"keccak256\":\"0x7091f4b8662996f2b13cd2aa2964fb6d944b3273c36c6974eab52e58072d8ac2\",\"urls\":[\"bzz-raw://c7e70208774f32edb7e21da180c244fc2ad65fa7ba366eaf87c506bbebe7869a\",\"dweb:/ipfs/QmSbcks8AZSyGLGxNi1HK2S873kxVPeauZfUaQCPJcNofz\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.0+commit.c7dfd78e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"approved\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"Approval\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"approved\",\"type\":\"bool\"}],\"name\":\"ApprovalForAll\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"Transfer\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"approve\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"}],\"name\":\"balanceOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"balance\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"getApproved\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"}],\"name\":\"isApprovedForAll\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"ownerOf\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"safeTransferFrom\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"safeTransferFrom\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"internalType\":\"bool\",\"name\":\"_approved\",\"type\":\"bool\"}],\"name\":\"setApprovalForAll\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"interfaceId\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"index\",\"type\":\"uint256\"}],\"name\":\"tokenByIndex\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"index\",\"type\":\"uint256\"}],\"name\":\"tokenOfOwnerByIndex\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"totalSupply\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"transferFrom\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"approve(address,uint256)\":{\"details\":\"Gives permission to `to` to transfer `tokenId` token to another account. The approval is cleared when the token is transferred. Only a single account can be approved at a time, so approving the zero address clears previous approvals. Requirements: - The caller must own the token or be an approved operator. - `tokenId` must exist. Emits an {Approval} event.\"},\"balanceOf(address)\":{\"details\":\"Returns the number of tokens in ``owner``'s account.\"},\"getApproved(uint256)\":{\"details\":\"Returns the account approved for `tokenId` token. Requirements: - `tokenId` must exist.\"},\"isApprovedForAll(address,address)\":{\"details\":\"Returns if the `operator` is allowed to manage all of the assets of `owner`. See {setApprovalForAll}\"},\"ownerOf(uint256)\":{\"details\":\"Returns the owner of the `tokenId` token. Requirements: - `tokenId` must exist.\"},\"safeTransferFrom(address,address,uint256)\":{\"details\":\"Safely transfers `tokenId` token from `from` to `to`, checking first that contract recipients are aware of the ERC721 protocol to prevent tokens from being forever locked. Requirements: - `from` cannot be the zero address. - `to` cannot be the zero address. - `tokenId` token must exist and be owned by `from`. - If the caller is not `from`, it must be have been allowed to move this token by either {approve} or {setApprovalForAll}. - If `to` refers to a smart contract, it must implement {IERC721Receiver-onERC721Received}, which is called upon a safe transfer. Emits a {Transfer} event.\"},\"safeTransferFrom(address,address,uint256,bytes)\":{\"details\":\"Safely transfers `tokenId` token from `from` to `to`. Requirements: - `from` cannot be the zero address. - `to` cannot be the zero address. - `tokenId` token must exist and be owned by `from`. - If the caller is not `from`, it must be approved to move this token by either {approve} or {setApprovalForAll}. - If `to` refers to a smart contract, it must implement {IERC721Receiver-onERC721Received}, which is called upon a safe transfer. Emits a {Transfer} event.\"},\"setApprovalForAll(address,bool)\":{\"details\":\"Approve or remove `operator` as an operator for the caller. Operators can call {transferFrom} or {safeTransferFrom} for any token owned by the caller. Requirements: - The `operator` cannot be the caller. Emits an {ApprovalForAll} event.\"},\"supportsInterface(bytes4)\":{\"details\":\"Returns true if this contract implements the interface defined by `interfaceId`. See the corresponding https://eips.ethereum.org/EIPS/eip-165#how-interfaces-are-identified[EIP section] to learn more about how these ids are created. This function call must use less than 30 000 gas.\"},\"tokenByIndex(uint256)\":{\"details\":\"Returns a token ID at a given `index` of all the tokens stored by the contract. Use along with {totalSupply} to enumerate all tokens.\"},\"tokenOfOwnerByIndex(address,uint256)\":{\"details\":\"Returns a token ID owned by `owner` at a given `index` of its token list. Use along with {balanceOf} to enumerate all of ``owner``'s tokens.\"},\"totalSupply()\":{\"details\":\"Returns the total amount of tokens stored by the contract.\"},\"transferFrom(address,address,uint256)\":{\"details\":\"Transfers `tokenId` token from `from` to `to`. WARNING: Usage of this method is discouraged, use {safeTransferFrom} whenever possible. Requirements: - `from` cannot be the zero address. - `to` cannot be the zero address. - `tokenId` token must be owned by `from`. - If the caller is not `from`, it must be approved to move this token by either {approve} or {setApprovalForAll}. Emits a {Transfer} event.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/C/Users/Pradeep/Documents/GitHub/ERC-721 Lending Contract/ERC-721-Lending-Contract/contracts/standards/IERC721Enumerable.sol\":\"IERC721Enumerable\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/Pradeep/Documents/GitHub/ERC-721 Lending Contract/ERC-721-Lending-Contract/contracts/standards/IERC165.sol\":{\"keccak256\":\"0xd8a383c2e4f53f407121c0c38a2949c5c7b96eb7b5f355b6bf67717b7bb1f059\",\"urls\":[\"bzz-raw://875c37c7593bc3078366e603932dbef5c3f99d927b3d8383130f92e0fc72a697\",\"dweb:/ipfs/QmPA8jz3suk4Y3fZ2Z2bg9zBezR518sRPHqirDAf4ozGJG\"]},\"/C/Users/Pradeep/Documents/GitHub/ERC-721 Lending Contract/ERC-721-Lending-Contract/contracts/standards/IERC721.sol\":{\"keccak256\":\"0x2496ce4b62618a25d32812ca8b94b6df5e0cc2a1694b42f1e59f9dd4fe94314d\",\"urls\":[\"bzz-raw://a354ca2fe42464e8888d0edfc80333215adc8b32f44eeca6b3a6bb29ebcc213d\",\"dweb:/ipfs/QmayVSEkF6qcRehSvUfFf9TDs4UHUsDDSodEp2rzukZnxG\"]},\"/C/Users/Pradeep/Documents/GitHub/ERC-721 Lending Contract/ERC-721-Lending-Contract/contracts/standards/IERC721Enumerable.sol\":{\"keccak256\":\"0x06c2a838a0cc0f7b2396c86ad4a850100437047a74e449ff780b028b85923bf1\",\"urls\":[\"bzz-raw://b20b62a3beeb4018d88ee53f86d61c206fc6484fd9c4d2674b08c460c741776a\",\"dweb:/ipfs/Qmf5wCYDUoh9ZcqnbFY367v1TMdA1NF6NSu6Q4dowGx8jU\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "immutableReferences": {},
@@ -351,7 +351,7 @@
   "deployedGeneratedSources": [],
   "sourceMap": "",
   "deployedSourceMap": "",
-  "source": "pragma solidity ^0.8.0;\r\n\r\nimport \"./IERC721.sol\";\r\n\r\ninterface IERC721Enumerable is IERC721 {\r\n    /**\r\n     * @dev Returns the total amount of tokens stored by the contract.\r\n     */\r\n    function totalSupply() external view returns (uint256);\r\n\r\n    /**\r\n     * @dev Returns a token ID owned by `owner` at a given `index` of its token list.\r\n     * Use along with {balanceOf} to enumerate all of ``owner``'s tokens.\r\n     */\r\n    function tokenOfOwnerByIndex(address owner, uint256 index)\r\n        external\r\n        view\r\n        returns (uint256 tokenId);\r\n\r\n    /**\r\n     * @dev Returns a token ID at a given `index` of all the tokens stored by the contract.\r\n     * Use along with {totalSupply} to enumerate all tokens.\r\n     */\r\n    function tokenByIndex(uint256 index) external view returns (uint256);\r\n}\r\n",
+  "source": "//SPDX-Licence-Identifier: MIT\r\n\r\npragma solidity ^0.8.0;\r\n\r\nimport \"./IERC721.sol\";\r\n\r\ninterface IERC721Enumerable is IERC721 {\r\n    /**\r\n     * @dev Returns the total amount of tokens stored by the contract.\r\n     */\r\n    function totalSupply() external view returns (uint256);\r\n\r\n    /**\r\n     * @dev Returns a token ID owned by `owner` at a given `index` of its token list.\r\n     * Use along with {balanceOf} to enumerate all of ``owner``'s tokens.\r\n     */\r\n    function tokenOfOwnerByIndex(address owner, uint256 index)\r\n        external\r\n        view\r\n        returns (uint256 tokenId);\r\n\r\n    /**\r\n     * @dev Returns a token ID at a given `index` of all the tokens stored by the contract.\r\n     * Use along with {totalSupply} to enumerate all tokens.\r\n     */\r\n    function tokenByIndex(uint256 index) external view returns (uint256);\r\n}\r\n",
   "sourcePath": "C:\\Users\\Pradeep\\Documents\\GitHub\\ERC-721 Lending Contract\\ERC-721-Lending-Contract\\contracts\\standards\\IERC721Enumerable.sol",
   "ast": {
     "absolutePath": "/C/Users/Pradeep/Documents/GitHub/ERC-721 Lending Contract/ERC-721-Lending-Contract/contracts/standards/IERC721Enumerable.sol",
@@ -378,7 +378,7 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:7"
+        "src": "34:23:7"
       },
       {
         "absolutePath": "/C/Users/Pradeep/Documents/GitHub/ERC-721 Lending Contract/ERC-721-Lending-Contract/contracts/standards/IERC721.sol",
@@ -387,7 +387,7 @@
         "nodeType": "ImportDirective",
         "scope": 3730,
         "sourceUnit": 3700,
-        "src": "27:23:7",
+        "src": "61:23:7",
         "symbolAliases": [],
         "unitAlias": ""
       },
@@ -400,11 +400,11 @@
               "name": "IERC721",
               "nodeType": "IdentifierPath",
               "referencedDeclaration": 3699,
-              "src": "85:7:7"
+              "src": "119:7:7"
             },
             "id": 3704,
             "nodeType": "InheritanceSpecifier",
-            "src": "85:7:7"
+            "src": "119:7:7"
           }
         ],
         "contractDependencies": [
@@ -426,7 +426,7 @@
             "documentation": {
               "id": 3705,
               "nodeType": "StructuredDocumentation",
-              "src": "100:84:7",
+              "src": "134:84:7",
               "text": " @dev Returns the total amount of tokens stored by the contract."
             },
             "functionSelector": "18160ddd",
@@ -440,7 +440,7 @@
               "id": 3706,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "210:2:7"
+              "src": "244:2:7"
             },
             "returnParameters": {
               "id": 3709,
@@ -453,7 +453,7 @@
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "scope": 3710,
-                  "src": "236:7:7",
+                  "src": "270:7:7",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -464,7 +464,7 @@
                     "id": 3707,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "236:7:7",
+                    "src": "270:7:7",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -473,10 +473,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "235:9:7"
+              "src": "269:9:7"
             },
             "scope": 3729,
-            "src": "190:55:7",
+            "src": "224:55:7",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
@@ -485,7 +485,7 @@
             "documentation": {
               "id": 3711,
               "nodeType": "StructuredDocumentation",
-              "src": "253:174:7",
+              "src": "287:174:7",
               "text": " @dev Returns a token ID owned by `owner` at a given `index` of its token list.\n Use along with {balanceOf} to enumerate all of ``owner``'s tokens."
             },
             "functionSelector": "2f745c59",
@@ -506,7 +506,7 @@
                   "name": "owner",
                   "nodeType": "VariableDeclaration",
                   "scope": 3720,
-                  "src": "462:13:7",
+                  "src": "496:13:7",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -517,7 +517,7 @@
                     "id": 3712,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "462:7:7",
+                    "src": "496:7:7",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -533,7 +533,7 @@
                   "name": "index",
                   "nodeType": "VariableDeclaration",
                   "scope": 3720,
-                  "src": "477:13:7",
+                  "src": "511:13:7",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -544,7 +544,7 @@
                     "id": 3714,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "477:7:7",
+                    "src": "511:7:7",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -553,7 +553,7 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "461:30:7"
+              "src": "495:30:7"
             },
             "returnParameters": {
               "id": 3719,
@@ -566,7 +566,7 @@
                   "name": "tokenId",
                   "nodeType": "VariableDeclaration",
                   "scope": 3720,
-                  "src": "542:15:7",
+                  "src": "576:15:7",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -577,7 +577,7 @@
                     "id": 3717,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "542:7:7",
+                    "src": "576:7:7",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -586,10 +586,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "541:17:7"
+              "src": "575:17:7"
             },
             "scope": 3729,
-            "src": "433:126:7",
+            "src": "467:126:7",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
@@ -598,7 +598,7 @@
             "documentation": {
               "id": 3721,
               "nodeType": "StructuredDocumentation",
-              "src": "567:167:7",
+              "src": "601:167:7",
               "text": " @dev Returns a token ID at a given `index` of all the tokens stored by the contract.\n Use along with {totalSupply} to enumerate all tokens."
             },
             "functionSelector": "4f6ccce7",
@@ -619,7 +619,7 @@
                   "name": "index",
                   "nodeType": "VariableDeclaration",
                   "scope": 3728,
-                  "src": "762:13:7",
+                  "src": "796:13:7",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -630,7 +630,7 @@
                     "id": 3722,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "762:7:7",
+                    "src": "796:7:7",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -639,7 +639,7 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "761:15:7"
+              "src": "795:15:7"
             },
             "returnParameters": {
               "id": 3727,
@@ -652,7 +652,7 @@
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "scope": 3728,
-                  "src": "800:7:7",
+                  "src": "834:7:7",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -663,7 +663,7 @@
                     "id": 3725,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "800:7:7",
+                    "src": "834:7:7",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -672,20 +672,20 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "799:9:7"
+              "src": "833:9:7"
             },
             "scope": 3729,
-            "src": "740:69:7",
+            "src": "774:69:7",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           }
         ],
         "scope": 3730,
-        "src": "54:758:7"
+        "src": "88:758:7"
       }
     ],
-    "src": "0:814:7"
+    "src": "34:814:7"
   },
   "legacyAST": {
     "absolutePath": "/C/Users/Pradeep/Documents/GitHub/ERC-721 Lending Contract/ERC-721-Lending-Contract/contracts/standards/IERC721Enumerable.sol",
@@ -712,7 +712,7 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:7"
+        "src": "34:23:7"
       },
       {
         "absolutePath": "/C/Users/Pradeep/Documents/GitHub/ERC-721 Lending Contract/ERC-721-Lending-Contract/contracts/standards/IERC721.sol",
@@ -721,7 +721,7 @@
         "nodeType": "ImportDirective",
         "scope": 3730,
         "sourceUnit": 3700,
-        "src": "27:23:7",
+        "src": "61:23:7",
         "symbolAliases": [],
         "unitAlias": ""
       },
@@ -734,11 +734,11 @@
               "name": "IERC721",
               "nodeType": "IdentifierPath",
               "referencedDeclaration": 3699,
-              "src": "85:7:7"
+              "src": "119:7:7"
             },
             "id": 3704,
             "nodeType": "InheritanceSpecifier",
-            "src": "85:7:7"
+            "src": "119:7:7"
           }
         ],
         "contractDependencies": [
@@ -760,7 +760,7 @@
             "documentation": {
               "id": 3705,
               "nodeType": "StructuredDocumentation",
-              "src": "100:84:7",
+              "src": "134:84:7",
               "text": " @dev Returns the total amount of tokens stored by the contract."
             },
             "functionSelector": "18160ddd",
@@ -774,7 +774,7 @@
               "id": 3706,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "210:2:7"
+              "src": "244:2:7"
             },
             "returnParameters": {
               "id": 3709,
@@ -787,7 +787,7 @@
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "scope": 3710,
-                  "src": "236:7:7",
+                  "src": "270:7:7",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -798,7 +798,7 @@
                     "id": 3707,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "236:7:7",
+                    "src": "270:7:7",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -807,10 +807,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "235:9:7"
+              "src": "269:9:7"
             },
             "scope": 3729,
-            "src": "190:55:7",
+            "src": "224:55:7",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
@@ -819,7 +819,7 @@
             "documentation": {
               "id": 3711,
               "nodeType": "StructuredDocumentation",
-              "src": "253:174:7",
+              "src": "287:174:7",
               "text": " @dev Returns a token ID owned by `owner` at a given `index` of its token list.\n Use along with {balanceOf} to enumerate all of ``owner``'s tokens."
             },
             "functionSelector": "2f745c59",
@@ -840,7 +840,7 @@
                   "name": "owner",
                   "nodeType": "VariableDeclaration",
                   "scope": 3720,
-                  "src": "462:13:7",
+                  "src": "496:13:7",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -851,7 +851,7 @@
                     "id": 3712,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "462:7:7",
+                    "src": "496:7:7",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -867,7 +867,7 @@
                   "name": "index",
                   "nodeType": "VariableDeclaration",
                   "scope": 3720,
-                  "src": "477:13:7",
+                  "src": "511:13:7",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -878,7 +878,7 @@
                     "id": 3714,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "477:7:7",
+                    "src": "511:7:7",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -887,7 +887,7 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "461:30:7"
+              "src": "495:30:7"
             },
             "returnParameters": {
               "id": 3719,
@@ -900,7 +900,7 @@
                   "name": "tokenId",
                   "nodeType": "VariableDeclaration",
                   "scope": 3720,
-                  "src": "542:15:7",
+                  "src": "576:15:7",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -911,7 +911,7 @@
                     "id": 3717,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "542:7:7",
+                    "src": "576:7:7",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -920,10 +920,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "541:17:7"
+              "src": "575:17:7"
             },
             "scope": 3729,
-            "src": "433:126:7",
+            "src": "467:126:7",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
@@ -932,7 +932,7 @@
             "documentation": {
               "id": 3721,
               "nodeType": "StructuredDocumentation",
-              "src": "567:167:7",
+              "src": "601:167:7",
               "text": " @dev Returns a token ID at a given `index` of all the tokens stored by the contract.\n Use along with {totalSupply} to enumerate all tokens."
             },
             "functionSelector": "4f6ccce7",
@@ -953,7 +953,7 @@
                   "name": "index",
                   "nodeType": "VariableDeclaration",
                   "scope": 3728,
-                  "src": "762:13:7",
+                  "src": "796:13:7",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -964,7 +964,7 @@
                     "id": 3722,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "762:7:7",
+                    "src": "796:7:7",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -973,7 +973,7 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "761:15:7"
+              "src": "795:15:7"
             },
             "returnParameters": {
               "id": 3727,
@@ -986,7 +986,7 @@
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "scope": 3728,
-                  "src": "800:7:7",
+                  "src": "834:7:7",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -997,7 +997,7 @@
                     "id": 3725,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "800:7:7",
+                    "src": "834:7:7",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1006,20 +1006,20 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "799:9:7"
+              "src": "833:9:7"
             },
             "scope": 3729,
-            "src": "740:69:7",
+            "src": "774:69:7",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           }
         ],
         "scope": 3730,
-        "src": "54:758:7"
+        "src": "88:758:7"
       }
     ],
-    "src": "0:814:7"
+    "src": "34:814:7"
   },
   "compiler": {
     "name": "solc",
@@ -1027,7 +1027,7 @@
   },
   "networks": {},
   "schemaVersion": "3.3.4",
-  "updatedAt": "2021-04-12T14:27:40.020Z",
+  "updatedAt": "2021-04-12T14:39:02.309Z",
   "devdoc": {
     "kind": "dev",
     "methods": {
