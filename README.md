@@ -54,4 +54,8 @@ The owner of token can list his NFT for loan. This option will transfer his toke
 
 ### Borrow NFT
 
-Once
+Anyone can borrow the NFT listed for loan by calling this function and transferring the loan amount. The loan amount can be obtained by calling the calcLoan function.
+
+## Testing
+
+All the functions are tested and the contract has 100% coverage.
